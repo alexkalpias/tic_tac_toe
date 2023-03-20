@@ -1,6 +1,6 @@
 board  = ['-','-','-','-','-','-','-','-','-','-']
 print("TIC TAC TOE GAME\n----------------")
-print("Positions:\n1 2 3 \n4 5 6 \n7 8 9\n")
+print("Positions:\n1 2 3 \n4 5 6 \n7 8 9\n----------------\n\n")
 
 #Draws Game Board
 def DrawBoard():
@@ -48,7 +48,7 @@ for i in range(1,10):
      if i%2==1:
           choice = int(input("Player 1 (X) turn\nEnter a position from 1 to 9\n"))
           while choice < 1 or choice > 9 or board[choice] != '-':
-               choice = int(input("Player 1 (X) turn\nWrong Position\nPlease enter a position from 1 to 9\n"))
+               choice = int(input("Player 1 (X) turn\nWrong Position!!!\nPlease enter a free position from 1 to 9:\n"))
           board[choice] = 'X'
           DrawBoard()
           if CheckWin() == True:
@@ -58,14 +58,23 @@ for i in range(1,10):
      else:
           choice = int(input("Player 2 (O) turn\nEnter a position from 1 to 9\n"))
           while choice < 1 or choice > 9 or board[choice] != '-':
-               choice = int(input("Player 2 (O) turn\nWrong Position\nPlease enter a position from 1 to 9\n"))
+               choice = int(input("Player 2 (O) turn\nWrong Position!!!\nPlease enter a free position from 1 to 9:\n"))
           board[choice] = 'O'
           DrawBoard()
           if CheckWin() == True:
                print("Player 2\n\n\n")
                break
 
-
+#New AI Player
+     else:
+          if i == 2 and board[5] == '-':
+             board[5] = 'O'
+         else:
+             board[1] = 'O'
+     DrawBoard()
+     if CheckWin() == True:
+         print("Player 2\n\n\n")
+         break
      
 
 
