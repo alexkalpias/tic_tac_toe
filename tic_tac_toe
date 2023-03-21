@@ -65,19 +65,5 @@ for i in range(1,10):
                print("Player 2\n\n\n")
                break
 
-#New AI Player
-     else:
-          if i == 2 and board[5] == '-':
-             board[5] = 'O'
-         else:
-             board[1] = 'O'
-     DrawBoard()
-     if CheckWin() == True:
-         print("Player 2\n\n\n")
-         break
-     
-
-
-    
 
 
