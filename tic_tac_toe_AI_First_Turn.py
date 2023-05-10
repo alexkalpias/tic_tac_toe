@@ -197,37 +197,29 @@ def TrytoWin():
           board[5] = 'O'
           return True   
 
-def ChooseRandom():
+def ChooseRandomAIFirst():
      if board[2] == '-':
-          print("Player 2 (O) turn")
           board[2] = 'O'
           return True
      elif board[4] == '-':
-          print("Player 2 (O) turn")
           board[4] = 'O'
           return True
      elif board[8] == '-':
-          print("Player 2 (O) turn")
           board[8] = 'O'
           return True
      elif board[6] == '-':
-          print("Player 2 (O) turn")
           board[6] = 'O'
           return True
      elif board[1] == '-':
-          print("Player 2 (O) turn")
           board[1] = 'O'
           return True
-     elif board[3] == '-':
-          print("Player 2 (O) turn")
+     elif board[3] == '-':        
           board[3] = 'O'
           return True
      elif board[7] == '-':
-          print("Player 2 (O) turn")
           board[7] = 'O'
           return True
      elif board[9] == '-':
-          print("Player 2 (O) turn")
           board[9] = 'O'
           return True
      
@@ -257,7 +249,8 @@ for i in range(1,10):
                print("Player 2 (O) turn")
                board[5] = 'O'
           else:
-               ChooseRandom()
+               ChooseRandomAiFirst()
+               print("Player 2 (O) turn")
                
           DrawBoard()
           if CheckWin() == True:
